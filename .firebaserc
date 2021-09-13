@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "miniprojet-2a514": {
+      "hosting": {
+        "mini-projet": [
+          "miniprojet-2a514"
+        ]
+      }
+    }
+  }
+}

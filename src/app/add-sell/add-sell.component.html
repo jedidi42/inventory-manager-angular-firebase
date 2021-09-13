@@ -1,0 +1,64 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+
+            <div class="card">
+
+                <form class="form-card" [formGroup]="Form">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Product name<span class="text-danger"> *</span></label>
+                            <select class="form-select" aria-label="Default select example" formControlName="product">
+
+                                <option *ngFor="let item of items; let i = index" value="{{ item.product }}">{{
+                                    item.product }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Supplier name<span class="text-danger"> *</span></label>
+                            <select class="form-select" aria-label="Default select example" formControlName="supplier">
+
+                                <option *ngFor="let supplier of suppliers; let i = index" value="{{ supplier.name }}">{{
+                                    supplier.name }}
+                                </option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Quantity<span class="text-danger"> *</span></label>
+                            <input type="number" id="Quantity" formControlName="quantity" min="1" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">date
+                                of transaction <span class="text-danger"> *</span></label> <input type="date" id="date"
+                                formControlName="date" required> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">description<span class="text-danger"> *</span></label>
+                            <input type="text" id="description" formControlName="description">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">status<span class="text-danger"> *</span></label>
+                            <select class="form-select" aria-label="Default select example" formControlName="status">
+                                <option selected>Open this select menu</option>
+                                <option value="in stock">in stock</option>
+                                <option value="in shipping">in shipping</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6"> <input type="button" class="btn-block btn-primary"
+                                value="add"> </div>
+                    </div>
+
+                    <div class="row justify-content-end">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

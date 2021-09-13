@@ -1,0 +1,26 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+   
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn first" name="login" placeholder="login" [(ngModel)]="email">
+      <input type="text" id="password" class="fadeIn second" name="login" placeholder="password" [(ngModel)]="password">
+      <input type="submit" class="fadeIn third" value="Log In" (click)="onLoginUser()">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+
+      <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+        <span>{{ firebaseErrorMessage }}</span>
+    </div>
+      <a class="underlineHover" href="#">Forgot Password?</a>
+
+
+    </div>
+
+  </div>
+</div>

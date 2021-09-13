@@ -1,0 +1,84 @@
+
+
+    <div class="row">
+        <div class="col-xs-5">
+        <h2 class="sub-header">Subtitle</h2>
+          
+    
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col" style="display:none;">product id</th>
+                <th scope="col">product name</th>
+                <th scope="col">quantity</th>
+                <th scope="col">supplier</th>
+                <th scope="col">date arrived</th>
+                <th scope="col">description </th>
+                <th scope="col">Action </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td style="display:none;">{{ item.id }}</td>
+                <td>{{ item.product }}</td>
+                <td> <input type=number value="{{ item.quantity }}" id="{{item.id}}" [disabled]="!allowedit"> </td>
+                <td>{{ item.supplier }}</td>
+                <td>{{ item.date }}</td>
+                <td>{{ item.description }}</td>
+
+                <td (click)="deleteItem(item)">
+                    <i class="material-icons">delete_forever</i>
+
+                </td>
+                
+                
+            </tr>
+        </tbody>
+    </table>
+          <div class="col-xs-5">
+                  <h2 class="sub-header">Latest Incidents</h2>
+                  
+  
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col" style="display:none;">product id</th>
+                <th scope="col">product name</th>
+                <th scope="col">quantity</th>
+                <th scope="col">supplier</th>
+                <th scope="col">date arrived</th>
+                <th scope="col">description </th>
+                <th scope="col">Action </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td style="display:none;">{{ item.id }}</td>
+                <td>{{ item.product }}</td>
+                <td> <input type=number value="{{ item.quantity }}" id="{{item.id}}" [disabled]="!allowedit"> </td>
+                <td>{{ item.supplier }}</td>
+                <td>{{ item.date }}</td>
+                <td>{{ item.description }}</td>
+
+                <td (click)="deleteItem(item)">
+                    <i class="material-icons">delete_forever</i>
+
+                </td>
+                
+               
+            </tr>
+        </tbody>
+    </table>
+        </div>
+        </div>
+    

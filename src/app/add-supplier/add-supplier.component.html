@@ -1,0 +1,28 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            
+            <div class="card">
+                
+                <form  class="form-card" [formGroup]="Form">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">supplier name<span class="text-danger"> *</span></label> <input type="text" id="Product" formControlName="name" required [(ngModel)]="pname"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">phone number<span class="text-danger"> *</span></label> <input type="text" id="Supplier" formControlName="phone" required [(ngModel)]="psup"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">adress<span class="text-danger"> *</span></label> <input type="text" id="Quantity" formControlName="adress" min="1" required [(ngModel)]="pqu"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">email<span class="text-danger"> *</span></label> <input type="text" id="date"formControlName="mail"required [(ngModel)]="pda"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                       
+                    <div class="form-group col-sm-6"> <input type="button" class="btn-block btn-primary" value="add" (click)="addSupplier()"> </div>
+                    </div>
+                    
+                    <div class="row justify-content-end">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
